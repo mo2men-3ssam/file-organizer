@@ -39,6 +39,9 @@ def organize_images() :
             os.replace(src, dst)
             print(f'[-]Image Archived to {dst}')
 
+        if not file_name.lower().endswith(formats) :
+            os.rmdir(folder_name)
+
 # organize videos
 def organize_videos() :
     folder_name = 'Videos'
@@ -52,6 +55,9 @@ def organize_videos() :
             dst = os.path.join(target_dir, folder_name, file_name)
             os.replace(src, dst)
             print(f'[-]Video Archived to {dst}')
+
+        if not file_name.lower().endswith(formats) :
+            os.rmdir(folder_name)
 
 # organize audios
 def organize_audios() :
@@ -68,6 +74,9 @@ def organize_audios() :
             os.replace(src, dst)
             print(f'[-]Audios Archived to {dst}')
 
+        if not file_name.lower().endswith(formats) :
+            os.rmdir(folder_name)
+
 # organize documents
 def organize_documents() :
     folder_name = 'Documents'
@@ -82,6 +91,9 @@ def organize_documents() :
             dst = os.path.join(target_dir, folder_name, file_name)
             os.replace(src, dst)
             print(f'[-]Document Archived to {dst}')
+
+        if not file_name.lower().endswith(formats) :
+            os.rmdir(folder_name)
 
 # organize archives
 def organize_archives() :
@@ -113,6 +125,9 @@ def organize_codes() :
             os.replace(src, dst)
             print(f'[-]Code Archived to {dst}')
 
+        if not file_name.lower().endswith(formats) :
+            os.rmdir(folder_name)
+
 # organize programs
 def organize_programs() :
     folder_name = 'Programs'
@@ -127,6 +142,9 @@ def organize_programs() :
             dst = os.path.join(target_dir, folder_name, file_name)
             os.replace(src, dst)
             print(f'[-]Programs Archived to {dst}')
+
+        if not file_name.lower().endswith(formats) :
+            os.rmdir(folder_name)
 
 if organize == 0 :
     organize_images()
